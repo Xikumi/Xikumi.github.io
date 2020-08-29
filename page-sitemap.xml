@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>blog.xikum.ml/404</loc>
+        <lastmod>2020-08-29T09:42:38.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>blog.xikum.ml/friends/</loc>
         <lastmod>2020-08-29T09:12:55.950Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -52,13 +59,6 @@
     <url>
         <loc>blog.xikum.ml/categories/</loc>
         <lastmod>2020-08-26T13:40:43.435Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>blog.xikum.ml/404</loc>
-        <lastmod>2020-08-26T13:40:43.409Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
