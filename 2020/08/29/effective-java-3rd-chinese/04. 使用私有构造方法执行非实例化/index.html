@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -20,13 +16,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>Xikum&#39;s Blog</title>
+  <title>4. 使用私有构造器执行非实例化 - Xikum&#39;s Blog</title>
   
-    <meta name="keywords" content="分享,学习,技术,笔记">
+    <meta name="keywords" content="笔记">
   
 
-  
-    <meta name="description" content="一个记录个人生活和笔记的博客!">
   
 
   <!-- feed -->
@@ -424,7 +418,7 @@
 
   
   
-      <div class='cover-wrapper  dock' style="display: none;">
+      <div class='cover-wrapper post dock' style="display: none;">
         
           <div class='cover-backstretch'></div>
         
@@ -488,8 +482,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">4. 使用私有构造器执行非实例化</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path"></div>
   <div id="pjax-comment-placeholder"></div>
@@ -498,14 +492,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("half" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("half" == "half") { // 半屏
+    if ("none" == "half") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("half" == "full") { // 全屏
+    } else if ("none" == "full") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -519,227 +513,226 @@
         
 
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   
-  <section class="post-list">
+
+
+  <div class='article-header'>
     
+    <div class="article-meta" id="top">
       
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
-    
-    
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/">
-        4. 使用私有构造器执行非实例化
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        4. 使用私有构造器执行非实例化　　偶尔你会想写一个只包含静态方法和静态字段的类。 这些类的名声非常不好，因为有些人滥用这些类从而避免以面向对象方式思考从而编写过程化的程序，但是它们确实有着特殊的用途。 它们可以用来按照 java.lang.Math 或 java.util.Arrays 的方式，把基本类型的值或数组类型上的相关方法组织起来。我们也可以通过 java.util.Collect...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2020-08-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/'>
-            阅读全文
+        <h1 class="title">
+          <a href="/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/">
+            4. 使用私有构造器执行非实例化
           </a>
+        </h1>
+        <div class='new-meta-box'>
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/Xikumi" rel="nofollow noopener">
+    <img no-lazy src="https://q2.qlogo.cn/headimg_dl?dst_uin=1374415225@qq.com,1374415225,&spec=100">
+    <p>Xikum</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年8月29日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="4. 使用私有构造器执行非实例化" data-path="/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+            
+          
         </div>
       
     </div>
-  
+  </div>
 
-</div>
 
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    <h1 id="4-使用私有构造器执行非实例化"><a href="#4-使用私有构造器执行非实例化" class="headerlink" title="4. 使用私有构造器执行非实例化"></a>4. 使用私有构造器执行非实例化</h1><p>　　偶尔你会想写一个只包含静态方法和静态字段的类。 这些类的名声非常不好，因为有些人滥用这些类从而避免以面向对象方式思考从而编写过程化的程序，但是它们确实有着特殊的用途。 它们可以用来按照 <code>java.lang.Math</code> 或 <code>java.util.Arrays</code> 的方式，把基本类型的值或数组类型上的相关方法组织起来。我们也可以通过 <code>java.util.Collections</code> 的方式，把实现特定接口上面的静态方法进行分组，也包括工厂方法（详见第 1 条）。 （从 Java 8 开始，你也可以将这些方法放在接口中，假定该接口是你编写的并可以进行修改。）最后，这样的类可以用于在 final 类上对方法进行分组，因为不能将它们放在子类中。</p>
+<p>　　这样的工具类（utility classes）不是设计用来被实例化的，因为实例化对它没有任何意义。然而，在没有显式构造器的情况下，编译器提供了一个公共的、无参的默认构造器。对于用户来说，该构造器与其他构造器没有什么区别。在已发布的 API 中经常看到无意识的被实例的类。</p>
+<p>　　<strong>试图通过创建抽象类来强制执行非实例化是行不通的。</strong> 该类可以被子类化，并且子类可以被实例化。此外，它误导用户认为该类是为继承而设计的（详见第 19 条）。不过，有一个简单的方法来确保非实例化。只有当类不包含显式构造器时，才会生成一个默认构造器，<strong>因此可以通过包含一个私有构造器来实现类的非实例化：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Noninstantiable utility class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UtilityClass</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Suppress default constructor for noninstantiability</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">UtilityClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> AssertionError();</span><br><span class="line">    &#125;</span><br><span class="line">    ... <span class="comment">// Remainder omitted</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　因为显式构造器是私有的，所以不可以在类的外部访问它。<code>AssertionError</code> 异常不是严格要求的，但是它可以避免不小心在类的内部调用构造器。它保证类在任何情况下都不会被实例化。这个习惯用法有点违反直觉，好像构造器就是设计成不能调用的一样。因此，如前面所示，添加注释是种明智的做法。</p>
+<p>　　这种习惯有一个副作用，就是使得一个类不能子类化。所有的构造器都必须显式或隐式地调用父类构造器，而在这群情况下子类则没有可访问的父类构造器来调用。</p>
+
+    
+      
+      <div class='footer'>
+        
+        
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/>blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/</a></p>
+                
+              
+            </blockquote>
           </div>
         
-      
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/29/effective-java-3rd-chinese/03.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%88%96%E6%9E%9A%E7%B1%BB%E5%AE%9E%E7%8E%B0Singleton%E5%B1%9E%E6%80%A7/">
-        3. 使用私有构造方法或枚类实现 Singleton 属性
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        3. 使用私有构造方法或枚类实现 Singleton 属性　　单例是一个仅实例化一次的类[Gamma95]。单例对象通常表示无状态对象，如函数 (详见第 24 条) 或一个本质上唯一的系统组件。让一个类成为单例会使测试它的客户变得困难，因为除非实现一个作为它类型的接口，否则不可能用一个模拟实现替代单例。
-　　有两种常见的方法来实现单例。两者都基于保持构造方法私有和导出公共静态成员以提供对唯一...
-      
+      </div>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2020-08-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/03.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%88%96%E6%9E%9A%E7%B1%BB%E5%AE%9E%E7%8E%B0Singleton%E5%B1%9E%E6%80%A7/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-29T17:38:13+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>最后更新于：2020年8月29日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/29/effective-java-3rd-chinese/02.%20%E5%BD%93%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E8%BF%87%E5%A4%9A%E6%97%B6%E4%BD%BF%E7%94%A8builder%E6%A8%A1%E5%BC%8F/">
-        2. 当构造方法参数过多时使用 builder 模式
-      </a>
-    </h2>
-  
-  <div class='md'>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><p>笔记</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        2. 当构造方法参数过多时使用 builder 模式　　静态工厂和构造方法都有一个限制：它们在可选参数很多的情景下，无法很好得扩展。请考虑一个代表包装食品上的营养成分标签的例子。这些标签有几个必需的属性——每次建议的摄入量，每罐的份量和每份卡路里 ，以及超过 20 个可选的属性——总脂肪、饱和脂肪、反式脂肪、胆固醇、钠等等。大多数产品只包含这些可选字段中的少数，且具有非零值（大部分字段为空）...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/&title=4. 使用私有构造器执行非实例化 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/&title=4. 使用私有构造器执行非实例化 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/&title=4. 使用私有构造器执行非实例化 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2020-08-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/02.%20%E5%BD%93%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E8%BF%87%E5%A4%9A%E6%97%B6%E4%BD%BF%E7%94%A8builder%E6%A8%A1%E5%BC%8F/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
-        1. 考虑使用静态工厂方法替代构造方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        1. 考虑使用静态工厂方法替代构造方法　　一个类允许客户端获取其实例的传统方式，是提供一个公共构造方法。 其实，还有另一种技术应该成为每个程序员工具箱的一部分。 一个类可以提供一个简单的、只返回该类实例的公共静态工厂方法。 下面是一个 Boolean 简单的例子（ 基本类型boolean的包装类）。 此方法将基本类型boolean转换为 Boolean 对象引用：
-123public sta...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2020-08-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/'>
-            阅读全文
-          </a>
-        </div>
+      
+        <a class='next' href='/2020/08/29/effective-java-3rd-chinese/03.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%88%96%E6%9E%9A%E7%B1%BB%E5%AE%9E%E7%8E%B0Singleton%E5%B1%9E%E6%80%A7/'>
+          <p class='title'>3. 使用私有构造方法或枚类实现 Singleton 属性<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>3. 使用私有构造方法或枚类实现 Singleton 属性　　单例是一个仅实例化一次的类[Gamma95]。单例对象通常表示无状态对象，如函数 (详见第 24 条) 或一个本质上唯一的系统组件。...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow floatable blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
+
+
+
+
 
 
 </div>
@@ -840,26 +833,20 @@
   
     
     
-  
 
-  <section class="widget category shadow floatable blur desktop">
+
+
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/effective-java-3rd/" href="/categories/effective-java-3rd/"
-            id="categorieseffective-java-3rd"
-            ><div class='name'>effective-java-3rd</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
     </div>
   </section>
 

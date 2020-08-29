@@ -521,6 +521,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
     
     
@@ -534,16 +540,15 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/08/29/%E6%8E%A5%E5%8F%A3%E4%BC%98%E4%BA%8E%E5%8F%8D%E5%B0%84/">
-        接口优于反射
+      <a href="/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/">
+        4. 使用私有构造器执行非实例化
       </a>
     </h2>
   
   <div class='md'>
     
       
-        　　核心反射机制 java.lang.reflect 提供对任意类的编程访问。给定一个 Class 对象，你可以获得 Constructor、Method 和 Field 实例，分别代表了该 Class 实例所表示的类的构造器、方法和字段。这些对象提供对类的成员名、字段类型、方法签名等的编程访问。
-　　此外，Constructor、Method 和 Field 实例允许你反射性地操作它们的底...
+        4. 使用私有构造器执行非实例化　　偶尔你会想写一个只包含静态方法和静态字段的类。 这些类的名声非常不好，因为有些人滥用这些类从而避免以面向对象方式思考从而编写过程化的程序，但是它们确实有着特殊的用途。 它们可以用来按照 java.lang.Math 或 java.util.Arrays 的方式，把基本类型的值或数组类型上的相关方法组织起来。我们也可以通过 java.util.Collect...
       
     
   </div>
@@ -553,12 +558,149 @@
         <time>2020-08-29</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
         
       </div>
       
         <div>
-            <a class='readmore' href='/2020/08/29/%E6%8E%A5%E5%8F%A3%E4%BC%98%E4%BA%8E%E5%8F%8D%E5%B0%84/'>
+            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/04.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E9%9D%9E%E5%AE%9E%E4%BE%8B%E5%8C%96/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/29/effective-java-3rd-chinese/03.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%88%96%E6%9E%9A%E7%B1%BB%E5%AE%9E%E7%8E%B0Singleton%E5%B1%9E%E6%80%A7/">
+        3. 使用私有构造方法或枚类实现 Singleton 属性
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        3. 使用私有构造方法或枚类实现 Singleton 属性　　单例是一个仅实例化一次的类[Gamma95]。单例对象通常表示无状态对象，如函数 (详见第 24 条) 或一个本质上唯一的系统组件。让一个类成为单例会使测试它的客户变得困难，因为除非实现一个作为它类型的接口，否则不可能用一个模拟实现替代单例。
+　　有两种常见的方法来实现单例。两者都基于保持构造方法私有和导出公共静态成员以提供对唯一...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2020-08-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/03.%20%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%88%96%E6%9E%9A%E7%B1%BB%E5%AE%9E%E7%8E%B0Singleton%E5%B1%9E%E6%80%A7/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/29/effective-java-3rd-chinese/02.%20%E5%BD%93%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E8%BF%87%E5%A4%9A%E6%97%B6%E4%BD%BF%E7%94%A8builder%E6%A8%A1%E5%BC%8F/">
+        2. 当构造方法参数过多时使用 builder 模式
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        2. 当构造方法参数过多时使用 builder 模式　　静态工厂和构造方法都有一个限制：它们在可选参数很多的情景下，无法很好得扩展。请考虑一个代表包装食品上的营养成分标签的例子。这些标签有几个必需的属性——每次建议的摄入量，每罐的份量和每份卡路里 ，以及超过 20 个可选的属性——总脂肪、饱和脂肪、反式脂肪、胆固醇、钠等等。大多数产品只包含这些可选字段中的少数，且具有非零值（大部分字段为空）...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2020-08-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/02.%20%E5%BD%93%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E8%BF%87%E5%A4%9A%E6%97%B6%E4%BD%BF%E7%94%A8builder%E6%A8%A1%E5%BC%8F/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
+        1. 考虑使用静态工厂方法替代构造方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        1. 考虑使用静态工厂方法替代构造方法　　一个类允许客户端获取其实例的传统方式，是提供一个公共构造方法。 其实，还有另一种技术应该成为每个程序员工具箱的一部分。 一个类可以提供一个简单的、只返回该类实例的公共静态工厂方法。 下面是一个 Boolean 简单的例子（ 基本类型boolean的包装类）。 此方法将基本类型boolean转换为 Boolean 对象引用：
+123public sta...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2020-08-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/'>
             阅读全文
           </a>
         </div>
@@ -692,9 +834,9 @@
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0/" href="/categories/%E5%AD%A6%E4%B9%A0/"
-            id="categoriesE5ADA6E4B9A0"
-            ><div class='name'>学习</div><div class='badge'>(1)</div></a></li>
+            title="/categories/effective-java-3rd/" href="/categories/effective-java-3rd/"
+            id="categorieseffective-java-3rd"
+            ><div class='name'>effective-java-3rd</div><div class='badge'>(4)</div></a></li>
         
       </ul>
     </div>
@@ -743,7 +885,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>1 篇</div>
+          <div>4 篇</div>
         </div>
       
 
@@ -765,7 +907,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>1.7k 字</div>
+          <div>7.7k 字</div>
         </div>
       
 
@@ -787,7 +929,7 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sat Aug 29 2020 17:30:55 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Sat Aug 29 2020 17:38:23 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2020-08-29 日</div>
           
         </div>

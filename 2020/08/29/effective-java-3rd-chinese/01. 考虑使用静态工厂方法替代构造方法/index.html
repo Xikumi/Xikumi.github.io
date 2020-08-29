@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,7 +16,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：学习 - Xikum&#39;s Blog</title>
+  <title>1. 考虑使用静态工厂方法替代构造方法 - Xikum&#39;s Blog</title>
+  
+    <meta name="keywords" content="笔记">
   
 
   
@@ -418,7 +418,7 @@
 
   
   
-      <div class='cover-wrapper  dock' style="display: none;">
+      <div class='cover-wrapper post dock' style="display: none;">
         
           <div class='cover-backstretch'></div>
         
@@ -482,8 +482,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">1. 考虑使用静态工厂方法替代构造方法</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path"></div>
   <div id="pjax-comment-placeholder"></div>
@@ -512,76 +512,257 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  <div class='article-header'>
     
+    <div class="article-meta" id="top">
       
-  <section class="post-list">
-    
       
-        
-          
-        
       
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/29/%E6%8E%A5%E5%8F%A3%E4%BC%98%E4%BA%8E%E5%8F%8D%E5%B0%84/">
-        接口优于反射
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        　　核心反射机制 java.lang.reflect 提供对任意类的编程访问。给定一个 Class 对象，你可以获得 Constructor、Method 和 Field 实例，分别代表了该 Class 实例所表示的类的构造器、方法和字段。这些对象提供对类的成员名、字段类型、方法签名等的编程访问。
-　　此外，Constructor、Method 和 Field 实例允许你反射性地操作它们的底...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2020-08-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2020/08/29/%E6%8E%A5%E5%8F%A3%E4%BC%98%E4%BA%8E%E5%8F%8D%E5%B0%84/'>
-            阅读全文
+        <h1 class="title">
+          <a href="/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
+            1. 考虑使用静态工厂方法替代构造方法
           </a>
+        </h1>
+        <div class='new-meta-box'>
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/Xikumi" rel="nofollow noopener">
+    <img no-lazy src="https://q2.qlogo.cn/headimg_dl?dst_uin=1374415225@qq.com,1374415225,&spec=100">
+    <p>Xikum</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/effective-java-3rd/">effective-java-3rd</a>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年8月29日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="1. 考虑使用静态工厂方法替代构造方法" data-path="/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+            
+          
         </div>
       
     </div>
-  
+  </div>
 
-</div>
 
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    <h1 id="1-考虑使用静态工厂方法替代构造方法"><a href="#1-考虑使用静态工厂方法替代构造方法" class="headerlink" title="1. 考虑使用静态工厂方法替代构造方法"></a>1. 考虑使用静态工厂方法替代构造方法</h1><p>　　一个类允许客户端获取其实例的传统方式，是提供一个公共构造方法。 其实，还有另一种技术应该成为每个程序员工具箱的一部分。 一个类可以提供一个简单的、只返回该类实例的公共静态工厂方法。 下面是一个 <code>Boolean</code> 简单的例子（ 基本类型<code>boolean</code>的包装类）。 此方法将基本类型<code>boolean</code>转换为 <code>Boolean</code> 对象引用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title">valueOf</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? Boolean.TRUE : Boolean.FALSE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　注意，静态工厂方法与设计模式中的工厂方法模式不同[Gamma95]。本条目中描述的静态工厂方法在设计模式中没有直接的等价。</p>
+<p>　　类可以为其客户端提供静态工厂方法，而不是公共构造方法。提供静态工厂方法来代替提供公共构造方法这种方式，有优点也有缺点。</p>
+<p>　　<strong>静态工厂方法的一个优点是，与构造方法不同，它们是有名字的。</strong> 如果构造方法的参数本身并不描述被返回的对象，则具有精心选择名称的静态工厂更易于使用，并且生成的客户端代码更易于阅读。 例如，返回一个可能为素数的 <code>BigInteger</code> 的构造方法 <code>BigInteger(int，int，Random)</code> 可以更好地表示为名为 <code>BigInteger.probablePrime</code> 的静态工厂方法。 （这个方法是在 Java 1.4 中添加的。）</p>
+<p>　　一个类只能有一个给定签名的构造方法。 程序员知道通过提供两个仅仅在参数类型的顺序不同的构造方法，来解决这个限制。 这是一个非常糟糕的主意。 对于这样的 API ，用户将永远不会记得哪个构造方法是哪个，最终会错误地调用。 阅读使用这些构造方法的代码的人只有在参考类文档的情况下才知道代码的作用。</p>
+<p>　　因为静态工厂方法有名字，所以它们不会受到上述限制。在类中似乎需要具有相同签名的多个构造方法的情况下，用静态工厂方法替换构造方法，并仔细选择名称来突出它们的差异。</p>
+<p>　　<strong>静态工厂方法的第二个优点是，与构造方法不同，它们不需要每次调用时都创建一个新对象。</strong> 这允许不可变类 （详见第 17 条）使用预先构建的实例，或者在构造时缓存实例，并反复分配它们以避免创建不必要的重复对象。<code>Boolean.valueof(boolean)</code> 方法说明了这种方法：它从不创建对象。这种技术类似于 <code>Flyweight</code> 模式[Gamma95]。如果经常请求等价对象，那么它可以极大地提高性能，特别是在创建它们的代价非常昂贵的情况下。</p>
+<p>　　静态工厂方法在重复调用时，返回相同实例这个特点，可以让类在任何时候都能对实例保持严格的控制。这样做的类被称为实例控制类（ instance-controlled）。有很多理由足以让我们去我们编写实例控制类。实例控制可以保证一个类是单例 的（详见第 3 条） 或不可实例化的 （详见第 4 条）。同时,它允许一个不可变的值类 （详见第 17 条） 保证不存在两个相等但不相同的实例，也就是说当且仅当 <code>a == b</code> 时才有 <code>a.equals(b)</code>。这是<code>Flyweight</code>模式的基础[Gamma95]。<code>Enum</code> 类型 （详见第 34 条）可以做到这点。</p>
+<p>　　<strong>静态工厂方法的第三个优点是，与构造方法不同，它们可以返回其返回类型的任何子类型的对象。</strong> 这为你在选择返回对象的类型时，提供了很大的灵活性。</p>
+<p>　　这种灵活性的一个应用是， API 可以返回对象而不需要公开它的类。 以这种方式隐藏实现类，会使 API 非常紧凑。 这种技术适用于基于接口的框架（详见第 20 条），其中接口为静态工厂方法提供自然返回类型。</p>
+<p>　　在 Java 8 之前，接口不能有静态方法。根据约定，一个名为 <code>Types</code> 的接口的静态工厂方法被放入一个不可实例化的伙伴类（companion class）（详见第 4 条）<code>Types</code> 类中。例如，Java 集合框架有 45 个接口的实用工具实现，提供不可修改的集合、同步集合等等。几乎所有这些实现都是通过静态工厂方法在一个不可实例化的类 (<code>java.util.collections</code>) 中返回的。返回对象的类都是隐藏的。</p>
+<p>　　<code>Collections</code> 框架 API 的规模要比它之前返回的 45 个单独的公共类要小得多，每个类在集合框架中都有一个便利的实现。不仅精简了API，还减少了程序员为了使用 API而掌握的概念的数量和难度。程序员知道返回的对象恰好有其接口指定的 API，因此不需要为实现类读阅读额外的类文档。此外，使用这种静态工厂方法，需要客户端通过接口替代实现类，来引用返回的对象，这通常是良好的实践（详见第 64 条）。</p>
+<p>　　从 Java 8 开始，接口不能包含静态方法的限制被取消了，所以通常没有理由为接口提供一个不可实例化的伴随类。 很多公开的静态成员应该放在这个接口本身。 但是，请注意，将这些静态方法的大部分实现代码放在单独的包私有类中仍然是必要的。 这是因为 Java 8 要求所有接口的静态成员都是公共的。 Java 9 允许私有静态方法，但静态字段和静态成员类仍然需要公开。</p>
+<p>　　<strong>静态工厂的第四个优点是返回对象的类可以根据输入参数的不同而不同。</strong> 声明的返回类型的任何子类都是允许的。 返回对象的类也可以随每次发布而不同。</p>
+<p>　　<code>EnumSet</code> 类（详见第 36 条）没有公共构造方法，只有静态工厂。 在 OpenJDK 实现中，它们根据底层枚举类型的大小返回两个子类中的一个的实例：大多数枚举类型具有 64 个或更少的元素，静态工厂将返回一个 <code>RegularEnumSet</code> 实例， 底层是<code>long</code> 类型；如果枚举类型具有六十五个或更多元素，则工厂将返回一个 <code>JumboEnumSet</code> 实例，底层是<code>long</code> 类型的数组。</p>
+<p>　　这两个实现类的存在对于客户端而言是不可见的。 如果 <code>RegularEnumSet</code> 对于小的枚举类型不再具有性能优势，则可以在未来版本中将其淘汰，且不会产生任何不良影响。 同样，如果可以证明添加 <code>EnumSet</code> 的更多的实现可以提高性能，那么在未来的版本可能就会这样做。 客户既不知道也不关心他们从工厂返回的对象的类别; 他们只需要知道它是 <code>EnumSet</code> 的子类。</p>
+<p>　　<strong>静态工厂的第五个优点是，在编写包含该方法的类时，返回的对象的类不需要存在。</strong> 这种灵活的静态工厂方法构成了服务提供者框架的基础，比如 Java 数据库连接 API（JDBC）。服务提供者框架是提供者实现服务的系统，并且系统使得实现对客户端可用，从而将客户端从实现中分离出来。</p>
+<p>　　服务提供者框架中有三个基本组：服务接口，它表示实现；提供者注册 API，提供者用来注册实现；以及服务访问 API，客户端使用该 API 获取服务的实例。服务访问 API 允许客户指定选择实现的标准。在缺少这样的标准的情况下，API 返回一个默认实现的实例，或者允许客户通过所有可用的实现进行遍历。服务访问 API 是灵活的静态工厂，它构成了服务提供者框架的基础。</p>
+<p>　　服务提供者框架的一个可选的第四个组件是一个服务提供者接口，它描述了一个生成服务接口实例的工厂对象。在没有服务提供者接口的情况下，必须对实现进行反射实例化（详见第 65 条）。在 JDBC 的情况下，<code>Connection</code> 扮演服务接口的一部分，<code>DriverManager.registerDriver</code> 提供程序注册 API、<code>DriverManager.getConnection</code> 是服务访问 API，<code>Driver</code> 是服务提供者接口。</p>
+<p>　　服务提供者框架模式有许多变种。 例如，服务访问 API 可以向客户端返回比提供者提供的更丰富的服务接口。 这是桥接模式[Gamma95]。 依赖注入框架（详见第 5 条）可以被看作是强大的服务提供者。 从 Java 6 开始，平台包含一个通用的服务提供者框架 <code>java.util.ServiceLoader</code>，所以你不需要，一般也不应该自己编写（详见第 59 条）。 JDBC 不使用 <code>ServiceLoader</code>，因为前者早于后者。</p>
+<p>　　<strong>只提供静态工厂方法的主要限制是，没有公共或受保护构造方法的类不能被子类化。</strong> 例如，要想将 <code>Collections</code> 框架中任何遍历的实现类进行子类化，是不可能的。但是这样也会因祸得福，因为它鼓励程序员使用组合（composition）而不是继承（详见第 18 条），并且是不可变类型锁需要的（详见第 17 条）。</p>
+<p>　　<strong>静态工厂方法的第二个缺点是，程序员很难找到它们。</strong> 它们不像构造方法那样在 API 文档中明确的标注出来。因此，对于提供了静态方法而不是构造器的类来说，想要查明如何实例化一个类是十分困难的。Javadoc 工具可能有一天会注意到静态工厂方法。与此同时，通过关注类或者接口的文档中静态方法，并且遵守标准的命名习惯，也可以弥补这一劣势。下面是一些静态工厂方法的常用名称。以下清单这是列出了其中的一小部分：</p>
+<ul>
+<li>from ——  类型转换方法，它接受单个参数并返回此类型的相应实例，例如：<strong>Date d = Date.from(instant)</strong>;</li>
+<li>of —— 聚合方法，接受多个参数并返回该类型的实例，并把他们合并在一起，例如：<strong>Set&lt;Rank&gt; faceCards = EnumSet.of(JACK, QUEEN, KING)</strong>;</li>
+<li>valueOf —— from 和 to 更为详细的替代 方式，例如：<strong>BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE)</strong>;</li>
+<li>instance 或 getinstance —— 返回一个由其参数 (如果有的话) 描述的实例，但不能说它具有相同的值，例如：<strong>StackWalker luke = StackWalker.getInstance(options)</strong>;</li>
+<li>create 或 newInstance —— 与 instance 或 getInstance 类似，除此之外该方法保证每次调用返回一个新的实例，例如：<strong>Object newArray = Array.newInstance(classObject, arrayLen)</strong>;</li>
+<li>getType —— 与 getInstance 类似，但是在工厂方法处于不同的类中的时候使用。<strong>getType</strong> 中的 <strong>Type</strong> 是工厂方法返回的对象类型，例如：<strong>FileStore fs = Files.getFileStore(path)</strong>;</li>
+<li>newType —— 与 newInstance 类似，但是在工厂方法处于不同的类中的时候使用。<strong>newType</strong>中的 <strong>Type</strong> 是工厂方法返回的对象类型，例如：<strong>BufferedReader br = Files.newBufferedReader(path)</strong>;</li>
+<li>type —— getType 和 newType 简洁的替代方式，例如：<strong>List&lt;Complaint&gt; litany = Collections.list(legacyLitany)</strong>;</li>
+</ul>
+<p>　　总之，静态工厂方法和公共构造方法都有它们的用途，并且了解它们的相对优点是值得的。通常，静态工厂更可取，因此避免在没有考虑静态工厂的情况下，直接选择使用或提供公共构造方法。</p>
+
+    
+      
+      <div class='footer'>
+        
+        
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/>blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</a></p>
+                
+              
+            </blockquote>
           </div>
         
+        
+      </div>
+    
+  </div>
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-29T17:37:36+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>最后更新于：2020年8月29日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><p>笔记</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/&title=1. 考虑使用静态工厂方法替代构造方法 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
       
     
-  </section>
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/&title=1. 考虑使用静态工厂方法替代构造方法 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=blog.xikum.ml/2020/08/29/effective-java-3rd-chinese/01.%20%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%9B%BF%E4%BB%A3%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/&title=1. 考虑使用静态工厂方法替代构造方法 - Xikum's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
 
 
-    
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/08/29/effective-java-3rd-chinese/02.%20%E5%BD%93%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E8%BF%87%E5%A4%9A%E6%97%B6%E4%BD%BF%E7%94%A8builder%E6%A8%A1%E5%BC%8F/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2. 当构造方法参数过多时使用 builder 模式</p>
+          <p class='content'>2. 当构造方法参数过多时使用 builder 模式　　静态工厂和构造方法都有一个限制：它们在可选参数很多的情景下，无法很好得扩展。请考虑一个代表包装食品上的营养成分标签的例子。这些标签有几个必...</p>
+        </a>
+      
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow floatable blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -680,26 +861,20 @@
   
     
     
-  
 
-  <section class="widget category shadow floatable blur desktop">
+
+
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0/" href="/categories/%E5%AD%A6%E4%B9%A0/"
-            id="categoriesE5ADA6E4B9A0"
-            ><div class='name'>学习</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
     </div>
   </section>
 
@@ -746,7 +921,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>1 篇</div>
+          <div>4 篇</div>
         </div>
       
 
@@ -768,7 +943,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>1.7k 字</div>
+          <div>7.7k 字</div>
         </div>
       
 
@@ -790,7 +965,7 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sat Aug 29 2020 17:30:55 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Sat Aug 29 2020 17:38:23 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2020-08-29 日</div>
           
         </div>
@@ -854,6 +1029,7 @@
 
 
 </aside>
+
 
 
       </div>
