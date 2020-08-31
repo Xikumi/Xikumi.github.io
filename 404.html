@@ -111,7 +111,7 @@
 
   $(function () {
     pjax_valine();
-  });</script><script src="/js/app.js"></script><script src="/js/search.js"></script><script defer>const LCCounter = {
+  });</script><script src="/js/app.js"></script><script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js"></script><script defer>const LCCounter = {
     app_id: 'qMdUebnlq6h8rn8okgsSf4Cw-MdYXbMMI',
     app_key: 't3wWgTAC03742cHO5bkmmxKz',
     custom_api_server: '',
@@ -202,7 +202,7 @@
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'blog.xikum.ml' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://blog.xikum.ml' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -220,7 +220,7 @@
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'blog.xikum.ml' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://blog.xikum.ml' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -242,7 +242,7 @@
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'blog.xikum.ml' + pv.getAttribute('data-path');
+          var url = 'http://blog.xikum.ml' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

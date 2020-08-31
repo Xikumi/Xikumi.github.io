@@ -2,62 +2,62 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>blog.xikum.ml</loc>
+        <loc>http://blog.xikum.ml</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/404</loc>
+        <loc>http://blog.xikum.ml/404</loc>
         <lastmod>2020-08-29T09:44:55.548Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/friends/</loc>
+        <loc>http://blog.xikum.ml/friends/</loc>
         <lastmod>2020-08-29T09:12:55.950Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/about/</loc>
+        <loc>http://blog.xikum.ml/about/</loc>
         <lastmod>2020-08-29T09:07:34.461Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/gallery/</loc>
+        <loc>http://blog.xikum.ml/gallery/</loc>
         <lastmod>2020-08-29T08:52:43.310Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/suosuo/</loc>
+        <loc>http://blog.xikum.ml/suosuo/</loc>
         <lastmod>2020-08-29T06:35:00.482Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/tags/</loc>
+        <loc>http://blog.xikum.ml/tags/</loc>
         <lastmod>2020-08-26T13:40:43.459Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/mylist/</loc>
+        <loc>http://blog.xikum.ml/mylist/</loc>
         <lastmod>2020-08-26T13:40:43.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>blog.xikum.ml/categories/</loc>
+        <loc>http://blog.xikum.ml/categories/</loc>
         <lastmod>2020-08-26T13:40:43.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
